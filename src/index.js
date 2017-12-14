@@ -1,2 +1,6 @@
-// TODO: Render the `App` component to the DOM
+// <App />
 
+ReactDOM.render(
+  <App />,
+  document.querySelector('#app')
+);
