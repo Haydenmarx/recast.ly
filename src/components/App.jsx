@@ -8,10 +8,7 @@ class App extends React.Component {
   }
 
   handleClick(video) {
-    console.log(this.currentVideo);
     this.currentVideo = video;
-    console.log(this.currentVideo);
-    console.log(this.render);
     this.render();
   }
   
