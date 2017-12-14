@@ -4,7 +4,12 @@ var Search = (props) => {
     if (query.length === 0) {
       query = 'How to use Youtube';
     }
-    props.search(query);
+    let info = {
+      'max': 5,
+      'query': query,
+      'key': window._YOUTUBE_API_KEY 
+    };
+    props.search(info);
   };
   return (
     <div className="search-bar form-inline">

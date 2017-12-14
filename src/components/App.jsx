@@ -14,7 +14,8 @@ class App extends React.Component {
   //render
   
   youtubeSearch(query) {
-    console.log(query);
+    console.log('app.js: ', this);
+    searchYouTube(query).bind(this);
   }
 
   handleClick(video) {
