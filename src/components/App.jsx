@@ -3,12 +3,23 @@ class App extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.currentVideo = this.props.video[0][0];
-    //this.state
-    //this.setState
+  }
+  
+   
+  
+  //Search send info up
+  //info goes to Youtube
+  //youtube return results
+  //on success update local collection
+  //render
+  
+  youtubeSearch(query) {
+    console.log(query);
   }
 
   handleClick(video) {
     this.currentVideo = video;
+    this.setState();
     this.render();
   }
   
@@ -21,7 +32,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><h5><em></em><Search /></h5></div>
+            <div><h5><em></em><Search search = {this.youtubeSearch}/></h5></div>
           </div>
         </nav>
         <div className="row">

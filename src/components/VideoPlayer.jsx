@@ -9,7 +9,6 @@ var VideoPlayer = (prop) => (
     </div>
   </div>
 );
-{ console.log('Video Player'); }
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
 VideoPlayer.propTypes = {
