@@ -1,6 +1,4 @@
-// <App />
-
 ReactDOM.render(
-  <App />,
+  <App video={[window.exampleVideoData]}/>,
   document.querySelector('#app')
 );
