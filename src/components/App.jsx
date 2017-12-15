@@ -10,8 +10,17 @@ class App extends React.Component {
     };
   }
 
-  youtubeSearch(query) {
-    searchYouTube(query, videos => {
+  youtubeSearch(search) {
+    var query;
+    if (search.length === 0) {
+      query = 'How to use Youtube';
+    }
+    let info = {
+      'max': 5,
+      'query': search,
+      'key': window._YOUTUBE_API_KEY 
+    };
+    searchYouTube(info, videos => {
       this.setState({
         videos: videos,
         currentVideo: videos[0]

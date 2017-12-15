@@ -1,19 +1,11 @@
 var Search = (props) => {
   var onSearchButtonClick = () => {
-    let query = $('input').val();
-    if (query.length === 0) {
-      query = 'How to use Youtube';
-    }
-    let info = {
-      'max': 5,
-      'query': query,
-      'key': window._YOUTUBE_API_KEY 
-    };
+    let info = $('input').val();
     props.search(info);
   };
   return (
     <div className="search-bar form-inline">
-      <input className="form-control" type="text" />
+      <input className="form-control" type="text" onKeyPress={(e)=>{ if (e.which === 13 || e.keyCode === 13) { props.search(e.target.value); } }}/>
       <button className="btn hidden-sm-down" onClick={(onSearchButtonClick.bind(this))}>
         <span className="glyphicon glyphicon-search"></span>
       </button>
@@ -24,3 +16,6 @@ var Search = (props) => {
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 window.Search = Search;
+
+
+//e.target.value
